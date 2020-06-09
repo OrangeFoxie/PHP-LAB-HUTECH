@@ -26,7 +26,7 @@ if (isset($_POST["btnsubmit"])) {
 <?php include_once("header.php") ?>
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/lab_3/index.php">Trang chủ</a></li>
+        <li class="breadcrumb-item"><a href="http://localhost:1000/LAB-03/index.php">Trang chủ</a></li>
         <li class="breadcrumb-item active" aria-current="page">Thêm sản phẩm</li>
     </ol>
 </nav>

@@ -8,7 +8,7 @@ $prods = Product::list_product();
 ?>
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/lab_3/index.php">Trang chủ</a></li>
+        <li class="breadcrumb-item"><a href="http://localhost:1000/LAB-03/">Trang chủ</a></li>
         <li class="breadcrumb-item active" aria-current="page">Danh sách sản phẩm</li>
     </ol>
 </nav>
