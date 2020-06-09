@@ -35,7 +35,7 @@ require_once("/entities/category.class.php");
     </section>
 
 <div class="col-sm-9">
-                    
+    <h3>Sản phẩm cửa hàng</h3>
     <div class="row">
         <?php
         foreach ($prods as $item) {
