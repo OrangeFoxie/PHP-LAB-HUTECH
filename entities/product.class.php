@@ -55,4 +55,12 @@ class Product
         $result = $db->select_to_array($sql);
         return $result;
     }
+
+    //Lấy danh sách SP theo loại
+    public static function list_product_by_cateid($cateid){
+        $db = new DB();
+        $sql = "SELECT * FROM product WHERE CateID = '$cate_id'";
+        $result = $db->select_to_array($sql);
+        return $result;
+    }
 }

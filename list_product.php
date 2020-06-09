@@ -1,10 +1,17 @@
 <?php
 require_once("/entities/product.class.php");
+require_once("/entities/category.class.php");
 ?>
 
 <?php
-include_once("header.php");
-$prods = Product::list_product();
+    include_once("header.php");
+    if(!isset($_GET["cateid"])){
+        $prods = Product::list_product();
+    }else{
+        $cateid = $_GET["cateid"];
+        $prods = Product::list_product_by_cateid($cateid);
+    }$cates = Category::list_category();
+//$prods = Product::list_product();
 ?>
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
@@ -13,13 +20,14 @@ $prods = Product::list_product();
     </ol>
 </nav>
 <div class="container text-center">
+
     <section class="jumbotron text-center">
         <div class="container">
             <h1>Sản phẩm cửa hàng</h1>
-
         </div>
     </section>
 
+    
     <div class="row">
         <?php
         foreach ($prods as $item) {

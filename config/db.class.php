@@ -34,7 +34,7 @@ class DB
         // thực hiện execute truy vấn
         $connection->query("SET NAMES utf8");
         $result = $connection->query($queryString);
-        $connection->close();
+        //$connection->close();
         return $result;
     }
 
