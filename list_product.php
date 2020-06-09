@@ -25,7 +25,7 @@ $prods = Product::list_product();
         foreach ($prods as $item) {
         ?>
             <div class="card" style="width: 18rem;">
-                <img src="<?php echo "/lab_3/" . $item["Picture"]; ?>" class="card-img-top" style="width: 100%" alt="Image error">
+                <img src="<?php echo "/LAB-03/" . $item["Picture"]; ?>" class="card-img-top" style="height: 200px; align-content: center; text-align:center;"  alt="Image error">
                 <div class="card-body">
                     <h5 class="card-title"><?php echo $item["ProductName"]; ?></h5>
                     <p class="card-text"><?php echo $item["Price"]; ?></p>
