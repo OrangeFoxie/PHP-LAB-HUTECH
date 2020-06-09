@@ -63,4 +63,18 @@ class Product
         $result = $db->select_to_array($sql);
         return $result;
     }
+
+    //Lấy danh sách SP cùng loại
+    public static function list_product_relate($cateid, $id){
+        $db = new DB();
+        $sql = "SELECT * FROM product WHERE CateID='$cateid' AND productID!='$id'";
+        $result = $db->select_to_array($sql);
+        return $result;
+    }
+    public static function get_product($id){
+        $db = new DB();
+        $sql = "SELECT * FROM product WHERE productID='$id'";
+        $result = $db->select_to_array($sql);
+        return $result;
+    }
 }

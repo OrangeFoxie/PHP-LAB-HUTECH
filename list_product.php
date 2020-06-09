@@ -22,7 +22,7 @@ require_once("/entities/category.class.php");
 <div class="container text-center">
 
     <section class="jumbotron text-center">
-        <div class="col-sm-9">
+        <div class="col-sm-12">
             <h1>Sản phẩm cửa hàng</h1><br>
             <ul class = "list-group">
                 <?php
@@ -34,7 +34,7 @@ require_once("/entities/category.class.php");
         </div>
     </section>
 
-<div class="col-sm-9">
+<div class="col-sm-12">
     <h3>Sản phẩm cửa hàng</h3>
     <div class="row">
         <?php
