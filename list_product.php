@@ -22,12 +22,20 @@ require_once("/entities/category.class.php");
 <div class="container text-center">
 
     <section class="jumbotron text-center">
-        <div class="container">
-            <h1>Sản phẩm cửa hàng</h1>
+        <div class="col-sm-9">
+            <h1>Sản phẩm cửa hàng</h1><br>
+            <ul class = "list-group">
+                <?php
+                    foreach($cates as $item){
+                        echo "<li class='list-group-item'><a href=LAB-03/list_product.php?cateid=".$item["CateID"].">".$item["CategoryName"]."</a></li>";
+                    }
+                ?>
+            </ul>
         </div>
     </section>
 
-    
+<div class="col-sm-9">
+                    
     <div class="row">
         <?php
         foreach ($prods as $item) {
@@ -45,5 +53,6 @@ require_once("/entities/category.class.php");
         }
         ?>
     </div>
+</div>
 </div>
 <?php include_once("footer.php"); ?>
