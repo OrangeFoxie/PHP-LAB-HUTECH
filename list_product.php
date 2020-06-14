@@ -1,6 +1,6 @@
 <?php
-require_once("../LAB3/entities/product.class.php");
-require_once("../LAB3/entities/category.class.php");
+  require_once("../LAB3/entities/product.class.php");
+  require_once("../LAB3/entities/category.class.php");
 ?>
 
 <?php
@@ -11,7 +11,7 @@ require_once("../LAB3/entities/category.class.php");
         $cateid = $_GET["cateid"];
         $prods = Product::list_product_by_cateid($cateid);
     }$cates = Category::list_category();
-//$prods = Product::list_product();
+      //$prods = Product::list_product();
 ?>
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
