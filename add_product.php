@@ -1,7 +1,7 @@
 <?php
 
-require_once("/entities/product.class.php");
-require_once("/entities/category.class.php");
+require_once("../LAB3/entities/product.class.php");
+require_once("../LAB3/entities/category.class.php");
 
 if (isset($_POST["btnsubmit"])) {
     // lấy giá trị từ form collection
@@ -26,7 +26,7 @@ if (isset($_POST["btnsubmit"])) {
 <?php include_once("header.php") ?>
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="http://localhost:1000/LAB-03/index.php">Trang chủ</a></li>
+        <li class="breadcrumb-item"><a href="../LAB3/index.php">Trang chủ</a></li>
         <li class="breadcrumb-item active" aria-current="page">Thêm sản phẩm</li>
     </ol>
 </nav>
@@ -102,7 +102,7 @@ if (isset($_POST["btnsubmit"])) {
 
         <!-- submit button -->
         <input class="btn btn-primary" type="submit" name="btnsubmit" value="Thêm sản phẩm" />
-        
+
     </form>
 </div>
 

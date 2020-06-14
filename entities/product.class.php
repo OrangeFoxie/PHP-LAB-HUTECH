@@ -1,7 +1,7 @@
 <?php
-require_once("config/db.class.php");
+require_once("../LAB3/config/db.class.php");
 /**
- * 
+ *
  */
 class Product
 {
@@ -40,11 +40,11 @@ class Product
         $db = new DB();
 
         // thêm product vào CSDL
-        $sql = "INSERT INTO Product (ProductName, CateID, Price, Quantity, Description, Picture) VALUES 
+        $sql = "INSERT INTO Product (ProductName, CateID, Price, Quantity, Description, Picture) VALUES
         ('$this->productName', '$this->cateID', '$this->price', '$this->quantity', '$this->description', '$filepath')";
 
         $result = $db->query_execute($sql);
-        
+
         return $result;
     }
 

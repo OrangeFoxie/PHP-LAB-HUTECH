@@ -1,6 +1,6 @@
 <?php
-require_once("/entities/product.class.php");
-require_once("/entities/category.class.php");
+require_once("../LAB3/entities/product.class.php");
+require_once("../LAB3/entities/category.class.php");
 ?>
 
 <?php
@@ -15,7 +15,7 @@ require_once("/entities/category.class.php");
 ?>
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="http://localhost:1000/LAB-03/">Trang chủ</a></li>
+        <li class="breadcrumb-item"><a href="../LAB3/index.php">Trang chủ</a></li>
         <li class="breadcrumb-item active" aria-current="page">Danh sách sản phẩm</li>
     </ol>
 </nav>
@@ -27,7 +27,7 @@ require_once("/entities/category.class.php");
             <ul class = "list-group">
                 <?php
                     foreach($cates as $item){
-                        echo "<li class='list-group-item'><a href=LAB-03/list_product.php?cateid=".$item["CateID"].">".$item["CategoryName"]."</a></li>";
+                        echo "<li class='list-group-item'><a href=LAB3/list_product.php?cateid=".$item["CateID"].">".$item["CategoryName"]."</a></li>";
                     }
                 ?>
             </ul>
@@ -40,8 +40,8 @@ require_once("/entities/category.class.php");
         <?php
         foreach ($prods as $item) {
         ?>
-            <div class="card" style="width: 18rem;">
-                <img src="<?php echo "/LAB-03/" . $item["Picture"]; ?>" class="card-img-top" style="height: 200px; align-content: center; text-align:center;"  alt="Image error">
+            <div class="card" style="width: 19rem;">
+                <img src="<?php echo "../LAB3/" . $item["Picture"]; ?>" class="card-img-top" style="height: 200px; width: 100%; align-content: center; text-align:center;"  alt="Image error">
                 <div class="card-body">
                     <h5 class="card-title"><?php echo $item["ProductName"]; ?></h5>
                     <p class="card-text"><?php echo $item["Price"]; ?></p>

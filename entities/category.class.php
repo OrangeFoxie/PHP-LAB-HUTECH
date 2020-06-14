@@ -1,7 +1,7 @@
 <?php
-require_once("config/db.class.php");
+require_once("../LAB3/config/db.class.php");
 /**
- * 
+ *
  */
 class Category
 {
