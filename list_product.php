@@ -46,7 +46,7 @@
                         <h5 class="card-title"><?php echo $item["ProductName"]; ?></h5>
                         <p class="card-text">Mô tả: <?php echo $item["Description"]; ?></p>
                         <p class="card-text"><?php echo $item["Price"]; ?></p>                        
-                        <a href="#" class="btn btn-primary">Mua hàng</a>
+                        <button type="button" class="btn btn-primary" onclick="location.href='/LAB3/shopping_cart.php?id=<?php echo $item["ProductID"]; ?>'">Mua hàng</button>
                     </div>
                 </div>
             <?php
@@ -66,7 +66,7 @@
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $item["ProductName"]; ?></h5>
                         <p class="card-text"><?php echo $item["Price"]; ?></p>
-                        <a href="#" class="btn btn-primary">Mua hàng</a>
+                        <button type="button" class="btn btn-primary" onclick="location.href='/LAB3/shopping_cart.php?id=<?php echo $item["ProductID"]; ?>'">Mua hàng</button>
                     </div>
                 </div>
             <?php
