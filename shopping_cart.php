@@ -38,7 +38,7 @@
         <ul class="list-group">
             <?php
                 foreach($cates as $item){
-                    echo <li class="list-group-item"><a href="../LAB3/list_product.php?cateid=".$item["CateID"].">".$item["CategoryName"]."></a></li>";
+                    echo "<li class='list-group-item'><a href=../LAB3/list_product.php?cateid=".$item["CateID"].">".$item["CategoryName"]."></a></li>";
                 }
             ?>
         </ul>
@@ -57,7 +57,22 @@
             </thead>
 
             <tbody>
-                
+                <?php
+                    $total_money = 0;
+                    if(isset($_SESSION["cart_items"]) && count($_SESSION["cart_items"])>0){
+                        foreach($_SESSION["cart_items"] as $item){
+                            $id = $item["pro_id"];
+                            $product = Product::get_product($id);
+                            $prod = reset($product);
+                            $total_money += $item["quantity"]*$prod["Price"];
+                            echo "<tr><td>".$prod["ProductName"]."</td><td><img style='width:90px; height:80px' src=".$prod["Picture"]."/></td><td>".$item["quantity"]."</td><td>".$prod["Price"]."</td><td>".$prod["Price"]."</td><tr>";
+                        }
+                        echo "<tr><td colspan=5><p class='text-right text-danger'>Tổng tiền: ".$total_money."</p></td></tr>";
+                        echo "<tr><td colspan=3><p class='text-right'><button type='button' class='btn btn-primary'>Tiếp tục mua hàng</button></p></td><td colspan=2><p class='text-right'><button type='button' class='btn btn-succes'>Thanh toán</button></p></td></tr>";
+                    }else{
+                        echo "Không có sản phẩm trong giỏ hàng!";
+                    }
+                ?>
             </tbody>
         </table>
     </div>
