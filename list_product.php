@@ -21,9 +21,9 @@
 </nav>
 <div class="container text-center">
 
-    <section class="jumbotron text-center">
-        <div class="col-sm-12">
-            <h1>Sản phẩm cửa hàng</h1><br>
+    <section class="container text-center">
+        <div class="col-sm-12 panel panel-danger">
+            <h3 class="panel-heading">Danh mục</h1><br>
             <ul class = "list-group">
                 <?php
                     foreach($cates as $item){
@@ -34,26 +34,45 @@
         </div>
     </section>
 
-<div class="col-sm-12">
-    <h3>Sản phẩm cửa hàng</h3>
-    <div class="row">
-        <?php
-        foreach ($prods as $item) {
-        ?>
-            <div class="card" style="width: 19rem;">
-                <img src="<?php echo "../LAB3/" . $item["Picture"]; ?>" class="card-img-top" style="height: 200px; width: 100%; align-content: center; text-align:center;"  alt="Image error">
-                <div class="card-body">
-                    <h5 class="card-title"><?php echo $item["ProductName"]; ?></h5>
-                    <p class="card-text"><?php echo $item["Price"]; ?></p>
-                    <p class="card-text">Mô tả: <?php echo $item["Description"]; ?></p>
-                    <a href="#" class="btn btn-primary">Mua hàng</a>
-
+    <div class="col-sm-12 panel panel-info">
+        <h3 class="panel-heading">Chi tiết sản phẩm</h3>
+        <div class="row">
+            <?php
+            foreach ($prods as $item) {
+            ?>
+                <div class="card" style="width: 19rem;">
+                    <img src="<?php echo "../LAB3/" . $item["Picture"]; ?>" class="card-img-top" style="height: 200px; width: 100%; align-content: center; text-align:center;"  alt="Image error">
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo $item["ProductName"]; ?></h5>
+                        <p class="card-text">Mô tả: <?php echo $item["Description"]; ?></p>
+                        <p class="card-text"><?php echo $item["Price"]; ?></p>                        
+                        <a href="#" class="btn btn-primary">Mua hàng</a>
+                    </div>
                 </div>
-            </div>
-        <?php
-        }
-        ?>
+            <?php
+            }
+            ?>
+        </div>
     </div>
-</div>
+
+    <div class="col-sm-12 panel panel-info">
+        <h3 class="panel-heading">Sản phẩm liên quan</h3>
+        <div class="row">
+            <?php
+            foreach ($prods as $item) {
+            ?>
+                <div class="card" style="width: 12rem;">
+                    <img src="<?php echo "../LAB3/" . $item["Picture"]; ?>" class="card-img-top" style="height: 200px; width: 100%; align-content: center; text-align:center;"  alt="Image error">
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo $item["ProductName"]; ?></h5>
+                        <p class="card-text"><?php echo $item["Price"]; ?></p>
+                        <a href="#" class="btn btn-primary">Mua hàng</a>
+                    </div>
+                </div>
+            <?php
+            }
+            ?>
+        </div>
+    </div>
 </div>
 <?php include_once("footer.php"); ?>
