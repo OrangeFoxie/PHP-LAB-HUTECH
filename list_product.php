@@ -45,6 +45,7 @@
                 <div class="card-body">
                     <h5 class="card-title"><?php echo $item["ProductName"]; ?></h5>
                     <p class="card-text"><?php echo $item["Price"]; ?></p>
+                    <p class="card-text">Mô tả: <?php echo $item["Description"]; ?></p>
                     <a href="#" class="btn btn-primary">Mua hàng</a>
 
                 </div>
